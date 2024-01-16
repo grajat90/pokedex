@@ -12,15 +12,15 @@ generator client {
 }
 
 model Pokemon {
-  id        Int           @id @default(autoincrement())
-  name      String
-  types     PokemonType[]
-  sprite    String
+  id     Int           @id @default(autoincrement())
+  name   String        @unique
+  types  PokemonType[]
+  sprite String        @unique
 
   @@index([name])
 }
 
 model PokemonType {
-  type     String    @id
+  type     String    @id @unique
   pokemons Pokemon[]
 }

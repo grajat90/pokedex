@@ -1,28 +1,47 @@
-# Create T3 App
+# Pokédex
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+### Search & filter through all pokemons by
+-  Single pokemon search
+-  Multiple pokemon search
+-  Search by pokemon type
 
-## What's next? How do I make an app with this?
+## Made using
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- Next.js + Typescript
+- Prisma
+- Tailwind CSS
+- tRPC + React Query
+- Material UI
+- PlanetscaleDB
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Pagination present
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Routes
 
-## Learn More
+- ### `getPokemonByName`
+Input - `string` - name of the pokemon to search(case insensitive), e.g. bulbasaur
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Returns a single pokemon and its details `id`, `name`, `type(s)`, `sprite (image)`
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- ### `getPokemonListByNames`
+Input: - `string[]` - Array of strings of pokemon names (case insensitive), pagination props
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Returns a list of pokemons matching the names provided in the array with the same details as in `getPokemonByName` along with total pokemons with this filter
 
-## How do I deploy this?
+- ### `getPokemonListByType`
+Input: - `string` - type of the pokemon to filter (case insensitive), pagination props
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Returns a filtered list of pokemons of given type with the same details as in `getPokemonByName` along with total pokemons with this filter
+
+- ###  `getPokemonTypes`
+Helper route to find all types of pokemons in the DB for easy selection from the selector component
+
+
+## Frontend features
+
+- Easily switch between 3 modes using switcher
+  - Search single pokemon
+  - Search many pokemons
+  - Filter by type
+- Pagination
+- Responsive design
