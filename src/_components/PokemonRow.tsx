@@ -1,7 +1,6 @@
 import TableCell from '@mui/material/TableCell';
 import Avatar from '@mui/material/Avatar';
 import TableRow from '@mui/material/TableRow';
-import TableHead from '@mui/material/TableHead';
 import _ from "lodash";
 import {RouterOutputs} from "~/utils/api";
 import {Chip} from "@mui/material";

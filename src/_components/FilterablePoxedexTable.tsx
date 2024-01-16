@@ -1,11 +1,7 @@
 import {useState} from "react";
 import _ from "lodash";
-import {Button, CircularProgress, Paper, Table, TableContainer, TextField} from "@mui/material";
+import {CircularProgress} from "@mui/material";
 import {api} from "~/utils/api";
-import PokemonRow from "~/_components/PokemonRow";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import TableCell from "@mui/material/TableCell";
 import PokedexTable from "~/_components/PokedexTable";
 import PokemonTypeSelection from "~/_components/PokemonTypeSelection";
 
