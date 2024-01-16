@@ -6,7 +6,7 @@ import PokedexTable from "~/_components/PokedexTable";
 import PokemonTypeSelection from "~/_components/PokemonTypeSelection";
 
 const PAGE_SIZE = 2
-export default function FilterablePoxedexTable() {
+export default function FilterablePokedexTable() {
     const [pokemonType, setPokemonType] = useState("water")
     const [page, setPage] = useState(0)
     const {

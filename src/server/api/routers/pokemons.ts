@@ -96,8 +96,7 @@ export const pokemonRouter = createTRPCRouter({
     getPokemonTypes: publicProcedure.query(async ({ctx}) => {
         const pokemonTypes = await ctx.db.pokemonType.findMany()
         return _.flatMap(pokemonTypes, (pokemonType) => {
-            const type = _.get(pokemonType, "type", "")
-            return type
+            return _.get(pokemonType, "type", "")
         })
     })
 });

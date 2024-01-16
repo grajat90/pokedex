@@ -3,7 +3,7 @@ import {useState} from "react";
 import {Tab, Tabs} from "@mui/material";
 import SearchByName from "~/_blocks/SearchByName";
 import SearchMany from "~/_blocks/SearchMany";
-import FilterablePoxedexTable from "~/_components/FilterablePoxedexTable";
+import FilterablePokedexTable from "~/_components/FilterablePokedexTable";
 
 export default function Home() {
     const [selectedTab, setSelectedTab] = useState(0)
@@ -32,7 +32,7 @@ export default function Home() {
                     selectedTab === 1 && <SearchMany />
                 }
                 {
-                    selectedTab === 2 && <FilterablePoxedexTable />
+                    selectedTab === 2 && <FilterablePokedexTable />
                 }
             </main>
         </>

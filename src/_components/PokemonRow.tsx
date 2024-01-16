@@ -2,7 +2,7 @@ import TableCell from '@mui/material/TableCell';
 import Avatar from '@mui/material/Avatar';
 import TableRow from '@mui/material/TableRow';
 import _ from "lodash";
-import {RouterOutputs} from "~/utils/api";
+import type {RouterOutputs} from "~/utils/api";
 import {Chip} from "@mui/material";
 
 export default function PokemonRow({pokemon}: { pokemon: RouterOutputs["pokemons"]["getPokemonByName"] | undefined}) {

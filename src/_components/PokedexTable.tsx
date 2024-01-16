@@ -1,4 +1,4 @@
-import {RouterOutputs} from "~/utils/api";
+import type {RouterOutputs} from "~/utils/api";
 import _ from "lodash";
 import {Paper, Table, TableContainer, TableFooter, TablePagination} from "@mui/material";
 import TableHead from "@mui/material/TableHead";
