@@ -14,7 +14,7 @@ export default function Home() {
                 <title>Pokédex</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <main className="md:px-20 py-10 flex min-h-screen min-w-screen flex-col items-center justify-items-start bg-slate-50 gap-10">
+            <main className="md:px-20 py-10 flex h-screen min-w-screen flex-col items-center justify-items-start bg-slate-50 gap-10">
                 <div>
                     <span className="font-mono font-bold text-7xl text-amber-400 font-outline-4">Pokédex</span>
                 </div>
